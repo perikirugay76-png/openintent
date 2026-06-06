@@ -11,6 +11,7 @@
     "test": "node --test packages/*/test/*.test.js",
     "validate:examples": "node packages/validator/src/cli.js examples/recruiting/intent-card.json examples/recruiting/capability-card.json examples/recruiting/match-report.json examples/procurement/intent-card.json examples/open-source-bounty/intent-card.json",
     "match:recruiting": "node packages/matcher/src/cli.js examples/recruiting/intent-card.json examples/recruiting/capability-card.json",
-    "compliance": "node --test packages/validator/test/compliance.test.js"
+    "compliance": "node --test packages/validator/test/compliance.test.js",
+    "validate:schemas": "node --test packages/validator/test/schema-ref-integrity.test.js"
   }
 }
