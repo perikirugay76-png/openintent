@@ -6,7 +6,7 @@ OpenIntent is an open protocol for agent-readable intent, capability, consent, a
 
 中文说明: [README.zh-CN.md](README.zh-CN.md)
 
-New to OpenIntent? Start with [Getting Started](docs/getting-started.md).
+New to OpenIntent? Start with [Getting Started](docs/getting-started.md). For design tradeoffs, see [Design Rationale](docs/design-rationale.md).
 
 MCP lets agents use tools. A2A and ACP let agents communicate. OpenIntent lets agents understand what someone wants, what someone can provide, what an agent is allowed to do, and why a match is good or bad.
 
