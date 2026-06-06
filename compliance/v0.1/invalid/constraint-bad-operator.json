@@ -1,0 +1,29 @@
+{
+  "type": "IntentCard",
+  "version": "0.1",
+  "id": "intent_invalid_bad_constraint_operator",
+  "actor": {
+    "type": "project",
+    "id": "https://example.org/projects/openintent-demo"
+  },
+  "intent": {
+    "summary": "Find implementation support for OpenIntent protocol validation",
+    "category": "collaboration.protocol",
+    "constraints": [
+      {
+        "field": "protocol_version",
+        "operator": "approximately",
+        "value": "0.1",
+        "required": true
+      }
+    ],
+    "preferences": []
+  },
+  "consent": {
+    "visibility": "public",
+    "can_store": true,
+    "can_forward": false,
+    "can_contact_matches": false,
+    "requires_human_approval": true
+  }
+}

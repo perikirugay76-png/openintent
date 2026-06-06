@@ -31,6 +31,7 @@ test("core compliance rejects clearly invalid v0.1 protocol object fixtures", as
     "invalid/unknown-type.json",
     "invalid/intent-card-missing-consent.json",
     "invalid/consent-policy-missing-version.json",
+    "invalid/constraint-bad-operator.json",
     "invalid/match-report-invalid-score.json"
   ];
 
