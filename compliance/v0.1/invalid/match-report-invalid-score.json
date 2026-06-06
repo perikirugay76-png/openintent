@@ -1,0 +1,11 @@
+{
+  "type": "MatchReport",
+  "version": "0.1",
+  "intent_id": "intent_compliance_001",
+  "capability_id": "capability_compliance_001",
+  "score": 1.2,
+  "status": "match",
+  "reasons": [],
+  "gaps": [],
+  "requires_human_review": true
+}

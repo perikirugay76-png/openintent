@@ -48,6 +48,8 @@ export function validateOpenIntentObject(value) {
       validateCapabilityCard(value, errors);
       break;
     case "ConsentPolicy":
+      requireString(value, "version", errors);
+      requireExact(value, "version", "0.1", errors);
       validateConsentPolicy(value, errors, "");
       break;
     case "MatchReport":

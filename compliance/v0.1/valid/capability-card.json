@@ -1,0 +1,32 @@
+{
+  "type": "CapabilityCard",
+  "version": "0.1",
+  "id": "capability_compliance_001",
+  "actor": {
+    "type": "service",
+    "id": "https://example.org/services/local-validator",
+    "name": "Local Validator Service"
+  },
+  "capability": {
+    "summary": "Provide local validation support for OpenIntent protocol objects",
+    "category": "collaboration.protocol",
+    "constraints": [
+      {
+        "field": "protocol_version",
+        "operator": "equals",
+        "value": "0.1",
+        "required": true
+      }
+    ],
+    "preferences": [
+      {
+        "field": "dependency_free",
+        "value": true,
+        "weight": 0.7
+      }
+    ]
+  },
+  "terms": {
+    "contact": "requires_approval"
+  }
+}

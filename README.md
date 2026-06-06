@@ -50,6 +50,14 @@ Validate your own card:
 node packages/validator/src/cli.js path/to/card.json
 ```
 
+Check the v0.1 compliance baseline:
+
+```bash
+npm run compliance
+```
+
+See [spec/v0.1/compliance.md](spec/v0.1/compliance.md) for what these checks do and do not cover.
+
 ## Example
 
 ```json
@@ -120,6 +128,7 @@ The goal is compatibility, not replacement.
 ```text
 spec/v0.1/              Protocol specification
 schemas/v0.1/           JSON Schemas for core objects
+compliance/v0.1/        Compliance baseline fixtures
 examples/               Domain examples
 packages/validator/     Dependency-free validator and CLI
 packages/matcher/       Minimal explainable matcher for examples

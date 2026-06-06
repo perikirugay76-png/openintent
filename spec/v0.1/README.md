@@ -2,6 +2,8 @@
 
 OpenIntent defines a minimal semantic protocol for AI agents to exchange, compare, and explain structured intent and capability.
 
+See [compliance.md](compliance.md) for the v0.1 compliance baseline.
+
 ## 1. Design Principles
 
 ### 1.1 Agent-Readable
@@ -202,7 +204,7 @@ If a matcher cannot evaluate a constraint value or operator, it should report a 
 
 OpenIntent does not mandate a ranking algorithm.
 
-A compliant matcher must:
+A matcher that claims OpenIntent v0.1 compatibility should:
 
 - accept at least one valid `IntentCard`
 - accept at least one valid `CapabilityCard`
@@ -210,6 +212,8 @@ A compliant matcher must:
 - explain positive reasons
 - explain gaps or mismatches
 - preserve consent constraints
+
+Matcher behavior is not part of core object compliance. OpenIntent v0.1 does not mandate a matching or ranking algorithm.
 
 ## 6. Consent
 

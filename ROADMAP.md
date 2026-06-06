@@ -10,10 +10,10 @@
 - dependency-free validator
 - domain examples
 - minimal explainable matcher demo
+- v0.1 compliance baseline
 
 ## v0.2 Candidates
 
-- match report compliance tests
 - `.well-known/openintent.json` discovery draft
 - TypeScript SDK
 - Python SDK

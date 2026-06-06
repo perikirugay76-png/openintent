@@ -1,0 +1,9 @@
+{
+  "type": "ConsentPolicy",
+  "version": "0.1",
+  "visibility": "shared",
+  "can_store": true,
+  "can_forward": false,
+  "can_contact_matches": false,
+  "requires_human_approval": true
+}

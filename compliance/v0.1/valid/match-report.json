@@ -1,0 +1,30 @@
+{
+  "type": "MatchReport",
+  "version": "0.1",
+  "intent_id": "intent_compliance_001",
+  "capability_id": "capability_compliance_001",
+  "score": 0.5,
+  "status": "partial_match",
+  "reasons": [
+    {
+      "code": "category_match",
+      "message": "Intent and capability use the same protocol collaboration category.",
+      "evidence": [
+        {
+          "field": "category",
+          "value": "collaboration.protocol"
+        }
+      ],
+      "weight": 0.5
+    }
+  ],
+  "gaps": [
+    {
+      "code": "human_review_required",
+      "message": "The intent consent policy requires human approval before outbound action.",
+      "severity": "info",
+      "suggested_resolution": "Ask for human approval before contact or forwarding."
+    }
+  ],
+  "requires_human_review": true
+}

@@ -1,0 +1,15 @@
+{
+  "type": "IntentCard",
+  "version": "0.1",
+  "id": "intent_invalid_missing_consent",
+  "actor": {
+    "type": "project",
+    "id": "https://example.org/projects/openintent-demo"
+  },
+  "intent": {
+    "summary": "Find implementation support for OpenIntent protocol validation",
+    "category": "collaboration.protocol",
+    "constraints": [],
+    "preferences": []
+  }
+}
