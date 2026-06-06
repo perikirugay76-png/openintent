@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openintent.dev/schemas/v0.1/intent-card.schema.json",
+  "title": "IntentCard",
+  "type": "object",
+  "required": ["type", "version", "id", "actor", "intent", "consent"],
+  "properties": {
+    "type": {
+      "const": "IntentCard"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor": {
+      "$ref": "#/$defs/actor"
+    },
+    "intent": {
+      "$ref": "#/$defs/intent"
+    },
+    "consent": {
+      "$ref": "#/$defs/consent"
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "actor": {
+      "type": "object",
+      "required": ["type", "id"],
+      "properties": {
+        "type": {
+          "enum": ["person", "organization", "agent", "service", "project"]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "intent": {
+      "type": "object",
+      "required": ["summary", "category", "constraints", "preferences"],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "preferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/preference"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "constraint": {
+      "type": "object",
+      "required": ["field", "operator", "value"],
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operator": {
+          "enum": ["equals", "not_equals", "contains", "in", "not_in", ">", ">=", "<", "<="]
+        },
+        "value": {},
+        "required": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "preference": {
+      "type": "object",
+      "required": ["field"],
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {},
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "consent": {
+      "type": "object",
+      "required": [
+        "visibility",
+        "can_store",
+        "can_forward",
+        "can_contact_matches",
+        "requires_human_approval"
+      ],
+      "properties": {
+        "visibility": {
+          "enum": ["private", "shared", "public"]
+        },
+        "can_store": {
+          "type": "boolean"
+        },
+        "can_forward": {
+          "type": "boolean"
+        },
+        "can_contact_matches": {
+          "type": "boolean"
+        },
+        "requires_human_approval": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

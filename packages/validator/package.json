@@ -1,0 +1,12 @@
+{
+  "name": "@openintent/validator",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Dependency-free validator for OpenIntent v0.1 cards.",
+  "bin": {
+    "openintent-validate": "./src/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

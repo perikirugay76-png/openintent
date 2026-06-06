@@ -1,0 +1,34 @@
+{
+  "type": "MatchReport",
+  "version": "0.1",
+  "intent_id": "intent_recruiting_001",
+  "capability_id": "capability_engineer_001",
+  "score": 0.3,
+  "status": "partial_match",
+  "reasons": [
+    {
+      "code": "shared_summary_terms",
+      "message": "Intent and capability summaries share 2 meaningful terms.",
+      "evidence": [
+        {
+          "field": "summary",
+          "value": "protocol"
+        },
+        {
+          "field": "summary",
+          "value": "typescript"
+        }
+      ],
+      "weight": 0.4
+    }
+  ],
+  "gaps": [
+    {
+      "code": "category_mismatch",
+      "message": "Intent category collaboration.recruiting differs from capability category collaboration.engineering.",
+      "severity": "warning",
+      "suggested_resolution": "Confirm whether the capability category is close enough for this intent."
+    }
+  ],
+  "requires_human_review": true
+}

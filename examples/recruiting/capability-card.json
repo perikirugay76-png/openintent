@@ -1,0 +1,33 @@
+{
+  "type": "CapabilityCard",
+  "version": "0.1",
+  "id": "capability_engineer_001",
+  "actor": {
+    "type": "person",
+    "id": "did:example:typescript-engineer",
+    "name": "TypeScript Protocol Engineer"
+  },
+  "capability": {
+    "summary": "Contributes TypeScript SDKs, schema tooling, and protocol examples",
+    "category": "collaboration.engineering",
+    "constraints": [
+      {
+        "field": "availability",
+        "operator": ">=",
+        "value": 8,
+        "unit": "hours_per_week"
+      }
+    ],
+    "preferences": [
+      {
+        "field": "project_type",
+        "value": "open_protocol",
+        "weight": 0.7
+      }
+    ]
+  },
+  "terms": {
+    "contact": "requires_approval",
+    "engagement": "open_source_contribution"
+  }
+}

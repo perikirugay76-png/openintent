@@ -1,0 +1,41 @@
+{
+  "type": "IntentCard",
+  "version": "0.1",
+  "id": "intent_procurement_001",
+  "actor": {
+    "type": "organization",
+    "id": "https://example.com",
+    "name": "Example Robotics"
+  },
+  "intent": {
+    "summary": "Find a vendor that can supply low-latency edge inference hardware",
+    "category": "procurement.hardware",
+    "constraints": [
+      {
+        "field": "delivery_region",
+        "operator": "equals",
+        "value": "US"
+      },
+      {
+        "field": "lead_time",
+        "operator": "<=",
+        "value": 30,
+        "unit": "days"
+      }
+    ],
+    "preferences": [
+      {
+        "field": "open_api_for_inventory",
+        "value": true,
+        "weight": 0.6
+      }
+    ]
+  },
+  "consent": {
+    "visibility": "shared",
+    "can_store": true,
+    "can_forward": true,
+    "can_contact_matches": false,
+    "requires_human_approval": true
+  }
+}

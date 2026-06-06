@@ -1,0 +1,41 @@
+{
+  "type": "IntentCard",
+  "version": "0.1",
+  "id": "intent_recruiting_001",
+  "actor": {
+    "type": "project",
+    "id": "https://github.com/openintent/openintent",
+    "name": "OpenIntent"
+  },
+  "intent": {
+    "summary": "Find a senior TypeScript contributor for an open protocol project",
+    "category": "collaboration.recruiting",
+    "constraints": [
+      {
+        "field": "experience",
+        "operator": ">=",
+        "value": 5,
+        "unit": "years"
+      },
+      {
+        "field": "interests",
+        "operator": "contains",
+        "value": "agents"
+      }
+    ],
+    "preferences": [
+      {
+        "field": "open_source_contributions",
+        "value": true,
+        "weight": 0.8
+      }
+    ]
+  },
+  "consent": {
+    "visibility": "public",
+    "can_store": true,
+    "can_forward": false,
+    "can_contact_matches": false,
+    "requires_human_approval": true
+  }
+}

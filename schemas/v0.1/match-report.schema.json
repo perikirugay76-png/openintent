@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openintent.dev/schemas/v0.1/match-report.schema.json",
+  "title": "MatchReport",
+  "type": "object",
+  "required": [
+    "type",
+    "version",
+    "intent_id",
+    "capability_id",
+    "score",
+    "status",
+    "reasons",
+    "gaps",
+    "requires_human_review"
+  ],
+  "properties": {
+    "type": {
+      "const": "MatchReport"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "intent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "enum": ["match", "partial_match", "no_match"]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/matchReason"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/matchGap"
+      }
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "matchReason": {
+      "type": "object",
+      "required": ["code", "message", "evidence"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "matchGap": {
+      "type": "object",
+      "required": ["code", "message", "severity"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": ["info", "warning", "blocking"]
+        },
+        "suggested_resolution": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

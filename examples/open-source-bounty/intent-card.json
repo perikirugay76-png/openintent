@@ -1,0 +1,35 @@
+{
+  "type": "IntentCard",
+  "version": "0.1",
+  "id": "intent_bounty_001",
+  "actor": {
+    "type": "project",
+    "id": "https://github.com/example/project",
+    "name": "Example Open Source Project"
+  },
+  "intent": {
+    "summary": "Find a contributor to implement JSON Schema compliance tests",
+    "category": "open_source.bounty",
+    "constraints": [
+      {
+        "field": "license",
+        "operator": "equals",
+        "value": "MIT-compatible"
+      }
+    ],
+    "preferences": [
+      {
+        "field": "previous_schema_experience",
+        "value": true,
+        "weight": 0.7
+      }
+    ]
+  },
+  "consent": {
+    "visibility": "public",
+    "can_store": true,
+    "can_forward": true,
+    "can_contact_matches": true,
+    "requires_human_approval": true
+  }
+}

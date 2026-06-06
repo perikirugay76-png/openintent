@@ -1,0 +1,12 @@
+{
+  "name": "@openintent/matcher",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Minimal explainable matcher for OpenIntent v0.1 examples.",
+  "bin": {
+    "openintent-match": "./src/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  }
+}
