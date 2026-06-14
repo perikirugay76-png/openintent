@@ -52,8 +52,12 @@ This RFC does not define:
 
 The v0.1 core should be compatible with future adapters for MCP, A2A, ACP, OpenAPI, ActivityPub, and schema.org.
 
-## Open Questions
+## v0.1 Decisions
 
-- Should `ConsentPolicy` remain embedded in `IntentCard`, or also become a standalone reusable document?
-- What is the minimum useful `MatchReport` for compliance testing?
-- Which example domain should become the first end-to-end demo?
+- `IntentCard` embeds consent fields so permission travels with the intent. A standalone `ConsentPolicy` is also a core object for cases where the same policy is exchanged or validated independently. Embedded consent does not include `type` or `version`.
+- The minimum compliant `MatchReport` identifies one intent and one capability, provides a score and status, explains reasons and gaps, and states whether human review is required.
+- Recruiting is the first end-to-end reference example. It demonstrates the protocol loop without making recruiting part of the protocol core.
+
+## Deferred Questions
+
+Identity proofs, discovery, reputation, ranking, negotiation, and adapter behavior remain outside OpenIntent v0.1. They require separate RFCs before they can affect the core protocol.
