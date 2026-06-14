@@ -2,7 +2,7 @@
 name: Example request
 about: Suggest a real-world example domain
 title: "example: "
-labels: example
+labels: examples
 assignees: ""
 ---
 

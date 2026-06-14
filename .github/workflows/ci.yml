@@ -26,3 +26,6 @@ jobs:
 
       - name: Validate examples
         run: npm run validate:examples
+
+      - name: Run recruiting match
+        run: npm run match:recruiting

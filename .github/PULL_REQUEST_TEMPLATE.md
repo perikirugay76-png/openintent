@@ -8,6 +8,7 @@ What does this change?
 - [ ] Schema
 - [ ] Example
 - [ ] Validator
+- [ ] Compliance
 - [ ] Documentation
 - [ ] Other
 
@@ -18,3 +19,4 @@ What does this change?
 - [ ] I updated validator behavior when changing schemas.
 - [ ] I ran `npm test`.
 - [ ] I ran `npm run validate:examples`.
+- [ ] I ran `npm run match:recruiting`.

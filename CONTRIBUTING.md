@@ -36,3 +36,13 @@ rfcs/0001-short-title.md
 ```
 
 The first RFC should explain motivation, proposed object changes, compatibility impact, examples, and migration notes.
+
+## Verification
+
+Before opening a pull request, run:
+
+```bash
+npm test
+npm run validate:examples
+npm run match:recruiting
+```
