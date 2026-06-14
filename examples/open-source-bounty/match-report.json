@@ -1,0 +1,47 @@
+{
+  "type": "MatchReport",
+  "version": "0.1",
+  "intent_id": "intent_bounty_001",
+  "capability_id": "capability_bounty_contributor_001",
+  "score": 0.9,
+  "status": "match",
+  "reasons": [
+    {
+      "code": "category_match",
+      "message": "Intent and capability share category open_source.bounty.",
+      "evidence": [
+        {
+          "field": "category",
+          "intent_value": "open_source.bounty",
+          "capability_value": "open_source.bounty"
+        }
+      ],
+      "weight": 0.5
+    },
+    {
+      "code": "shared_summary_terms",
+      "message": "Intent and capability summaries share 4 meaningful terms.",
+      "evidence": [
+        {
+          "field": "summary",
+          "value": "compliance"
+        },
+        {
+          "field": "summary",
+          "value": "json"
+        },
+        {
+          "field": "summary",
+          "value": "schema"
+        },
+        {
+          "field": "summary",
+          "value": "tests"
+        }
+      ],
+      "weight": 0.8
+    }
+  ],
+  "gaps": [],
+  "requires_human_review": true
+}

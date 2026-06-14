@@ -1,0 +1,32 @@
+{
+  "type": "CapabilityCard",
+  "version": "0.1",
+  "id": "capability_bounty_contributor_001",
+  "actor": {
+    "type": "person",
+    "id": "did:example:schema-contributor",
+    "name": "Schema Test Contributor"
+  },
+  "capability": {
+    "summary": "Implements JSON Schema compliance tests for open source projects",
+    "category": "open_source.bounty",
+    "constraints": [
+      {
+        "field": "license",
+        "operator": "equals",
+        "value": "MIT-compatible"
+      }
+    ],
+    "preferences": [
+      {
+        "field": "work_type",
+        "value": "protocol_testing",
+        "weight": 0.8
+      }
+    ]
+  },
+  "terms": {
+    "contact": "requires_approval",
+    "engagement": "open_source_bounty"
+  }
+}
